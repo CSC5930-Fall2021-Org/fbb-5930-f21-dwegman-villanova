@@ -89,7 +89,7 @@ public class FooBarBaz {
 		
 			
 		//Path filepath = Paths.get("src/resources/fbb-input.txt");
-		if(args[0].equals("batch"))
+		else if(args[0].equals("batch"))
 		{
 				
 			
