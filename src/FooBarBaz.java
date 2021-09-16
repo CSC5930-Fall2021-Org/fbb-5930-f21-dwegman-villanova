@@ -2,10 +2,10 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Path;
+//import java.nio.file.Path;
 
 public class FooBarBaz {
-    public static void main(String[] args) throws Exception {
+           public static void main(String[] args) throws Exception {
         if (args == null || args.length == 0)
         // if (args[0])
         {
@@ -22,7 +22,8 @@ public class FooBarBaz {
                     String input = sc.nextLine();
                     String trim = input.trim();
                     // String inputws = input.replaceAll("\\s", "");
-                    if (trim.equalsIgnoreCase("stop")) {
+                    String stop = "stop";
+                    if (trim.equalsIgnoreCase(stop)) {
                         break;
                     }
                     try {
@@ -61,13 +62,16 @@ public class FooBarBaz {
                                 }
                             }
                         }
-                        else
+                        else {
                             System.out.print(trim + "=" + "Invalid\n");
+                        }
                     }
                     catch (NumberFormatException e) {
                         System.out.print(input + "=" + "Invalid\n");
                     }
+                    //sc.close();
                 }
+            
             }
 
             // Path filepath = Paths.get("src/resources/fbb-input.txt");
@@ -135,7 +139,7 @@ public class FooBarBaz {
 
                 }
                 catch (IOException e) {
-                    System.err.println("Unable to open file or write file.");
+                    System.err.println("Unable to open file or write file.\n");
                 }
                 finally {
                     sc2.close();
