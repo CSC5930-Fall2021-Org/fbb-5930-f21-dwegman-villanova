@@ -15,8 +15,9 @@ public class FooBarBaz {
             System.out.println("Hello " + args[0] + ".");
 
             if (args[0].equals("console")) {
+                Scanner sc = new Scanner(System.in);
                 while (true) {
-                    Scanner sc = new Scanner(System.in);
+                    //Scanner sc = new Scanner(System.in);
 
                     System.out.println("\nEnter the input");
                     String input = sc.nextLine();
@@ -71,7 +72,7 @@ public class FooBarBaz {
                     }
                     //sc.close();
                 }
-            
+                sc.close();
             }
 
             // Path filepath = Paths.get("src/resources/fbb-input.txt");
