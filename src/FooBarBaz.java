@@ -2,7 +2,6 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.io.IOException;
 import java.io.PrintWriter;
-//import java.nio.file.Path;
 
 public class FooBarBaz {
     private static final String BAZ = "baz";
@@ -14,7 +13,6 @@ public class FooBarBaz {
                 
         if (args == null || args.length == 0)
         {
-            //System.out.println("Enter \"batch\" or \"console\" as argument.");
             fbb.processConsole();
         }
         else {
@@ -24,7 +22,6 @@ public class FooBarBaz {
                 fbb.processConsole();
             }
 
-            // Path filepath = Paths.get("src/resources/fbb-input.txt");
             else if (args[0].equals("batch")) {
 
                 fbb.processBatch();
@@ -88,11 +85,6 @@ public class FooBarBaz {
                 String input = sc.nextLine();
                 String trim = input.trim();
                 
-                //String stop = "stop";
-                //while
-                //if (stop.equalsIgnoreCase(trim)) {
-                //    break;
-              //  }
                 while(!"stop".equalsIgnoreCase(trim)) {
                 try {
                     int n = Integer.parseInt(trim);
