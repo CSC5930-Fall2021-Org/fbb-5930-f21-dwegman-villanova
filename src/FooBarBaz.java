@@ -103,7 +103,7 @@ public class FooBarBaz {
             catch (NumberFormatException e) {
                 System.out.println(input + "=" + "Invalid");
             }
-            System.out.println("Enter the input");            
+            System.out.println("Enter the input");
             input = sc.nextLine();
             trim = input.trim();
         }
@@ -113,7 +113,7 @@ public class FooBarBaz {
 
     protected String transform(int test) {
         StringBuilder transformedValue = new StringBuilder();
-            
+
         if (test == 0) {
             transformedValue.append(test);
         }
@@ -121,21 +121,21 @@ public class FooBarBaz {
             if (test % 3 == 0) {
                 transformedValue.append(FOO);
             }
-    
+
             if (test % 5 == 0) {
                 transformedValue.append(BAR);
             }
-    
+
             if (test % 7 == 0) {
                 transformedValue.append(BAZ);
             }
-    
+
             if (test % 7 != 0 && test % 5 != 0 && test % 3 != 0) {
                 transformedValue.append(test);
             }
-            
+
         }
         return transformedValue.toString();
-        
+
     }
 }
