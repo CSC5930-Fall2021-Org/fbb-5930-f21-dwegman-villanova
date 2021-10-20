@@ -8,7 +8,7 @@ public class FooBarBaz {
     private static final String BAR = "bar";
     private static final String FOO = "foo";
 
-    public static void main(String[] args) throws Exception {
+    public void main(String[] args) throws Exception {
         FooBarBaz fbb = new FooBarBaz();
 
         if (args == null || args.length == 0) {
@@ -103,7 +103,7 @@ public class FooBarBaz {
             catch (NumberFormatException e) {
                 System.out.println(input + "=" + "Invalid");
             }
-            System.out.println("Enter the input");
+            System.out.println("Enter the input");            
             input = sc.nextLine();
             trim = input.trim();
         }
@@ -113,21 +113,29 @@ public class FooBarBaz {
 
     protected String transform(int test) {
         StringBuilder transformedValue = new StringBuilder();
-        if (test % 3 == 0) {
-            transformedValue.append(FOO);
-        }
-
-        if (test % 5 == 0) {
-            transformedValue.append(BAR);
-        }
-
-        if (test % 7 == 0) {
-            transformedValue.append(BAZ);
-        }
-
-        if (test % 7 != 0 && test % 5 != 0 && test % 3 != 0) {
+            
+        if (test == 0) {
             transformedValue.append(test);
         }
+        else {
+            if (test % 3 == 0) {
+                transformedValue.append(FOO);
+            }
+    
+            if (test % 5 == 0) {
+                transformedValue.append(BAR);
+            }
+    
+            if (test % 7 == 0) {
+                transformedValue.append(BAZ);
+            }
+    
+            if (test % 7 != 0 && test % 5 != 0 && test % 3 != 0) {
+                transformedValue.append(test);
+            }
+            
+        }
         return transformedValue.toString();
+        
     }
 }
